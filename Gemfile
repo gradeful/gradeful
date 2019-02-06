@@ -40,7 +40,7 @@ gem 'execjs'
 gem 'sqlite3', '~> 1.3.6
 
 # Reduces boot times through caching; required in config/boot.rb
-# 'bootsnap', '>= 1.1.0', require: false
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
