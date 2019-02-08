@@ -7,7 +7,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-       # Handle successful save
+      log_in @user
+      puts 'A new user signed up!'
+      redirect_to '/'
     else
       render 'new'
     end
