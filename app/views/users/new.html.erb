@@ -1,0 +1,38 @@
+<% provide(:title, 'Sign Up') %>
+
+<div class="ui text container">
+  <div class="ui center aligned grid">
+    <div class="eight wide column">
+      <br><br>
+      <h1 class="ui centered header">Sign Up</h1>
+      <br><br>
+      <%= form_for(@user, html: {class: 'ui form'} ) do |form| %>
+
+        <%#= render 'shared/error_messages' %>
+
+        <div class="field">
+          <%= form.label :name%>
+          <%= form.text_field :name, class: 'ui input'%>
+        </div>
+
+        <div class="field">
+          <%= form.label :email %>
+          <%= form.email_field :email %>
+        </div>
+
+        <div class="field">
+          <%= form.label :password%>
+          <%= form.password_field :password%>
+        </div>
+
+        <div class="field">
+          <%= form.label :password_confirmation, 'Confirmation'%>
+          <%= form.password_field :password_confirmation %>
+        </div>
+
+        <%= form.submit "Create my account", class: 'ui fluid green button' %>
+
+      <% end %>
+    </div>
+  </div>
+</div>
