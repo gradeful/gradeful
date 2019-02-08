@@ -5,7 +5,11 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = current_user
+    if current_user.nil?
+      redirect_to login_path
+    else
+      @user = current_user
+    end
   end
 
   def create

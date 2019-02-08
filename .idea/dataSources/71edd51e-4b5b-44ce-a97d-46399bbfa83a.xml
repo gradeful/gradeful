@@ -219,7 +219,11 @@
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="57" parent="13">
+    <column id="57" parent="13" name="remember_digest">
+      <Position>7</Position>
+      <DataType>varchar|0s</DataType>
+    </column>
+    <key id="58" parent="13">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
