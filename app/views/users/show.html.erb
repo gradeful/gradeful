@@ -1,0 +1,15 @@
+<% provide(:title, 'User') %>
+
+<div class="ui container">
+
+  <br><br><br>
+
+  <p>
+    <%= @user.name %>
+  </p>
+  <p>
+    <%= @user.email %>
+  </p>
+
+  <%= link_to "Log out", logout_path, method: :delete %>
+</div>

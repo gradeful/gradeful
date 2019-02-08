@@ -1,7 +1,6 @@
 class SessionsController < ApplicationController
 
   def new
-
   end
 
   def create
@@ -12,19 +11,17 @@ class SessionsController < ApplicationController
         redirect_to '/'
       else
         flash.now[:error] = 'Wrong password.'
-        puts 'wrong password'
         render 'new'
       end
     else
       flash.now[:error] = 'A user with that email doesn\'t exist.'
-      puts 'wrong email'
       render 'new'
     end
   end
 
   def destroy
     log_out
-    redirect_to '/'
+    redirect_to login_path
   end
 
 end
